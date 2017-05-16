@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+ </body>
+
+<script type="text/javascript">
+
+
+var options = {
+    enableHighAccuracy: false,
+    timeout: 5000,
+    maximumAge: 60000
+}
+
+navigator.geolocation.getCurrentPosition(on_success, on_error, options);
+
+function on_success(pos) {
+    // 将会获得以下信息
+    var latitude = pos.coords.latitude;
+	document.writeln(latitude)
+    var longitude = pos.coords.longitude;
+	document.writeln(longitude)
+    var accuracy = pos.coords.accuracy;
+	document.writeln(accuracy)
+    var timestamp = pos.timestamp;
+	document.writeln(timestamp)
+    // 以下信息不一定提供，和具体设备有关
+    var altitude = pos.coords.altitude;
+	document.writeln(altitude)
+    var altitudeAccuracy = pos.coords.altitudeAccuracy;
+	document.writeln(altitudeAccuracy)
+    var heading = pos.coords.heading;
+	document.writeln(heading)
+    var speed = pos.coords.speed;
+	document.writeln(speed)
+}
+
+function on_error(error) {
+    if (error.code == error.PERMISSION_DENIED) {
+        alert("User denied Geolocation.");
+    } else {// handle other cases...
+        alert(error.message);
+	}
+}
+
+
+</script>
+</html>
