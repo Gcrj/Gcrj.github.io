@@ -31,21 +31,29 @@
                 img_ts_show = false;
                 return false;
             }
-            var ifr = document.createElement('iframe');
-            ifr.src = 'baikejiemi://jump?type='+pagetype+'&para1='+pagepara;
-            if(pagetype == 3) {
-                ifr.src = ifr.src + '&para2=' + pagepara2;
+//             var ifr = document.createElement('iframe');
+//             ifr.src = 'baikejiemi://jump?type='+pagetype+'&para1='+pagepara;
+//             if(pagetype == 3) {
+//                 ifr.src = ifr.src + '&para2=' + pagepara2;
+//             }
+//             ifr.style.display = 'none';
+		
+		var url = 'baikejiemi://jump?type='+pagetype+'&para1='+pagepara;
+		 if(pagetype == 3) {
+                url = url + '&para2=' + pagepara2;
             }
-            ifr.style.display = 'none';
+		
+		location.href = url;
+		
             timeout = setTimeout(function () {
                     location.href = downloadUrl;
             }, 8000);
 
-            document.addEventListener("webkitvisibilitychange", clean);
-            document.addEventListener("visibilitychange", clean);
-            window.addEventListener("pagehide", clean),
+//             document.addEventListener("webkitvisibilitychange", clean);
+//             document.addEventListener("visibilitychange", clean);
+//             window.addEventListener("pagehide", clean),
 
-            document.body.appendChild(ifr);
+//             document.body.appendChild(ifr);
         }
 
         function clean() {
@@ -109,7 +117,7 @@
 	<aside class="app-link" id="apptiptop">
 		<a href="javascript:;"><span class="app-face"><img src="/static/images/logo.jpg" alt=""></span><span class="jm-name">解密APP：解密之旅从现在开始</span><em class="downbtn">免费下载</em></a>
 	</aside>
-	            <h1 class="jm-title">《甄嬛传222》端妃有多腹黑？她曾与三位娘娘交好，被她放弃的都死了</h1>
+	            <h1 class="jm-title">《甄嬛传333》端妃有多腹黑？她曾与三位娘娘交好，被她放弃的都死了</h1>
 	<a href="http://itunes.apple.com/cn/app/id902977856" url="mmmono://meow/g/1058965/" id="open-ios-app" download_url="http://itunes.apple.com/cn/app/id902977856">下载</a>
     <em class="jm-hits">0阅读</em>
     <p class="jm-author"><img src="http://a3.att.hudong.com/45/19/20300542906622142165196489385.jpg" alt="腾飞说历史">腾飞说历史</p>
