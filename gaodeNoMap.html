@@ -37,24 +37,6 @@
              str.push('精度：' + data.accuracy + ' 米');
         }//如为IP精确定位结果则没有精度信息
         str.push('是否经过偏移：' + (data.isConverted ? '是' : '否'));
-           str.push('pois：' + data.pois);
-              str.push('roads：' + data.roads);
-              str.push('crosses：' + data.crosses);
-      
-      var addressComponent =  data.addressComponent;
-              str.push('province：' + addressComponent.province);
-                 str.push('city：' + addressComponent.city);
-                 str.push('citycode：' + addressComponent.citycode);
-                 str.push('district：' + addressComponent.district);
-                 str.push('adcode：' + addressComponent.adcode);
-                 str.push('township：' + addressComponent.township);
-                 str.push('street：' + addressComponent.street);
-                 str.push('streetNumber：' + addressComponent.streetNumber);
-                 str.push('neighborhood：' + addressComponent.neighborhood);
-                 str.push('neighborhoodType：' + addressComponent.neighborhoodType);
-                 str.push('building：' + addressComponent.building);
-                 str.push('buildingType：' + addressComponent.buildingType);
-                 str.push('businessAreas：' + addressComponent.businessAreas);
         document.getElementById('tip').innerHTML = str.join('<br>');
     }
     //解析定位错误信息
