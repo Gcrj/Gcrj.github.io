@@ -54,7 +54,15 @@
                  str.push('neighborhoodType：' + addressComponent.neighborhoodType);
                  str.push('building：' + addressComponent.building);
                  str.push('buildingType：' + addressComponent.buildingType);
-                 str.push('businessAreas：' + addressComponent.businessAreas);
+        if(addressComponent.businessAreas){
+            str.push('businessArea：');
+            for(int i = 0; i < addressComponent.businessAreas.length; i++){
+                var businessArea = addressComponent.businessAreas[i];
+                str.push('id：' + businessArea.id);
+                str.push('name：' + businessArea.name);
+                str.push('location：' + businessArea.location);
+            }
+        }
         document.getElementById('tip').innerHTML = str.join('<br>');
     }
     //解析定位错误信息
