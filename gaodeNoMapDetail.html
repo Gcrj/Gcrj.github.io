@@ -55,8 +55,8 @@
                  str.push('building：' + addressComponent.building);
                  str.push('buildingType：' + addressComponent.buildingType);
         alert(1)
-//         if(addressComponent.businessAreas){
-//             alert(2)
+        if(addressComponent.businessAreas){
+            alert(2)
 //             str.push('businessArea：');
 //             for(int i = 0; i < addressComponent.businessAreas.length; i++){
 //                 alert(3 + i)
@@ -65,7 +65,7 @@
 //                 str.push('name：' + businessArea.name);
 //                 str.push('location：' + businessArea.location);
 //             }
-//         }
+        }
         document.getElementById('tip').innerHTML = str.join('<br>');
     }
     //解析定位错误信息
