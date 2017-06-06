@@ -54,9 +54,12 @@
                  str.push('neighborhoodType：' + addressComponent.neighborhoodType);
                  str.push('building：' + addressComponent.building);
                  str.push('buildingType：' + addressComponent.buildingType);
+        alert(1)
         if(addressComponent.businessAreas){
+            alert(2)
             str.push('businessArea：');
             for(int i = 0; i < addressComponent.businessAreas.length; i++){
+                alert(3 + i)
                 var businessArea = addressComponent.businessAreas[i];
                 str.push('id：' + businessArea.id);
                 str.push('name：' + businessArea.name);
