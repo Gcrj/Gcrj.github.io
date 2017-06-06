@@ -54,12 +54,9 @@
                  str.push('neighborhoodType：' + addressComponent.neighborhoodType);
                  str.push('building：' + addressComponent.building);
                  str.push('buildingType：' + addressComponent.buildingType);
-        alert(1)
         if(addressComponent.businessAreas){
-            alert(2)
             str.push('businessArea：');
             for(var i = 0; i < addressComponent.businessAreas.length; i++){
-                alert(3 + i)
                 var businessArea = addressComponent.businessAreas[i];
                 str.push('id：' + businessArea.id);
                 str.push('name：' + businessArea.name);
@@ -67,6 +64,9 @@
             }
         }
         document.getElementById('tip').innerHTML = str.join('<br>');
+        
+        var last=data.toJSONString();
+        document.write(last);
     }
     //解析定位错误信息
     function onError(data) {
