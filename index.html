@@ -20,6 +20,8 @@
 <br/>
 <button onclick="openSea()">Open OpenSea</button>
 <br/>
+<button onclick="deepLink()">Open Deep Link</button>
+<br/>
 </body>
 
   <script>
@@ -33,6 +35,10 @@ function okx() {
       
 function openSea() {
   window.open("https://www.okx.com/download?deeplink=okx%3A%2F%2Fwallet%2Fdapp%2Fdetails%3FdappUrl%3Dhttps%3A%2F%2Fopensea.io", '_blank');
+}
+      
+function deepLink() {
+  window.open("okex://main/wc?uri=wc%3A36a3e0cf9c84903004cb969d079d4ad0a896e03d8466db83e67df0670f776be7%402%3FexpiryTimestamp%3D1719458418%26relay-protocol%3Dirn%26symKey%3D1e6f647a9e94289f24b53c7563759eb4e466576a0f35e30563f10db3418af976", '_blank');
 }
 </script>
 
