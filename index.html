@@ -20,6 +20,8 @@
 <br/>
 <button onclick="openSea()">Open OpenSea</button>
 <br/>
+<button onclick="openSea2()">Open OpenSea2</button>
+<br/>
 </body>
 
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
@@ -34,6 +36,10 @@ function okx() {
       
 function openSea() {
   window.Telegram.WebApp.openLink("https://www.okx.com/download?deeplink=okx%3A%2F%2Fwallet%2Fdapp%2Fdetails%3FdappUrl%3Dhttps%3A%2F%2Fopensea.io")
+}
+      
+function openSea2() {
+  window.open("https://www.okx.com/download?deeplink=okx%3A%2F%2Fwallet%2Fdapp%2Fdetails%3FdappUrl%3Dhttps%3A%2F%2Fopensea.io", '_blank');
 }
 </script>
 
